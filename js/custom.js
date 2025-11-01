@@ -13,7 +13,7 @@
         dots: false,
         slidesToShow: 2,
         slidesToScroll: 2,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000,
         arrows: true,
         focusOnSelect: true,

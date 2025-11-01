@@ -139,6 +139,20 @@ figure{margin:0px;}
 
 
 
+
+/*--------------------------------------------------------------
+# Billboard
+--------------------------------------------------------------*/
+.cta-block{padding:70px 0px;margin-bottom:55px;background-repeat:no-repeat;background-size:cover;position:relative;}
+.cta-block:before{content:"";width:100%;height:100%;background-color:#3d290e;position:absolute;top:0;opacity:0.5;}
+.cta-content{text-align:center;position:relative;}
+.cta-title{max-width:500px;margin:0 auto;color:var(--white);padding:30px;}
+.cta-title h2{color:var(--white);font-weight:700;}
+.cta-content .site-btn ul li a:hover{background-color: var(--white);color: var(--secondcolor);}
+.cta-content .site-btn ul li a:hover i{color: var(--secondcolor);}
+
+
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -204,6 +218,10 @@ figure{margin:0px;}
   .site-btn__btm ul{text-align: left;}
   .site-btn__btm ul li:first-child{margin-bottom:0px;}
   .inner-card .program-overlay{padding-bottom: 40px;}
+  .cta-content .site-btn li.transparent-btn{display: inline-block;}
+  .cta-content .site-btn li.transparent-btn a{font-size: 14px;padding: 8px 16px;}
+  .cta-block{padding: 30px 0px 0px 0px;}
+  .cta-title{padding: 0px;}
 }
 @media (max-width: 980px)
 {

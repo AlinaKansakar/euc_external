@@ -9,53 +9,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
-  font-family:"AeonikTRIAL-SemiBold";
-  font-display:swap;
-  src:url("../fonts/AeonikTRIAL-SemiBold.otf") format("opentype")
-}
-@font-face {
-  font-family:"AeonikTRIAL-Regular";
-  font-display:swap;
-  src:url("../fonts/AeonikTRIAL-Regular.otf") format("opentype")
-}
-@font-face {
-  font-family:"AeonikTRIAL-Medium";
-  font-display:swap;
-  src:url("../fonts/AeonikTRIAL-Medium.otf") format("opentype")
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 300 800;
-  font-stretch: 100%;
+  font-family: "AeonikTRIAL-SemiBold";
+  src: url("../fonts/AeonikTRIAL-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/opensans/v44/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6F15M.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
-/* cyrillic */
+
 @font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 300 800;
-  font-stretch: 100%;
+  font-family: "AeonikTRIAL-Regular";
+  src: url("../fonts/AeonikTRIAL-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/opensans/v44/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWvU6F15M.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
-/* greek-ext */
+
 @font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 300 800;
-  font-stretch: 100%;
+  font-family: "AeonikTRIAL-Medium";
+  src: url("../fonts/AeonikTRIAL-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/opensans/v44/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtU6F15M.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
 }
 
 :root{--maincolor:#ee4023;--secondcolor:#1d191c;--white:#ffffff;--black:#000000;--greycolor:#F7F8F7;--bordercolor:#dddddd;--default:#333333;}
-body{font-family:'AeonikTRIAL-Medium',Helvetica,Arial,Lucida,sans-serif;font-weight:400;font-size:14px;line-height:1.8;color:var(--default);background-color:#ffffff;width:100%;height:100%;letter-spacing: 0.031rem;}
+body{font-family: 'AeonikTRIAL-Regular',Helvetica,Arial,Lucida1,sans-serif;font-weight:400;font-size:14px;line-height:1.8;color:var(--default);background-color:#ffffff;width:100%;height:100%;letter-spacing: 0.031rem;}
 a{text-decoration:none;transition:all .4s ease;-moz-transition:all .4s ease;-webkit-transition:all .4s ease;-ms-transition:all .4s ease;-o-transition:all .4s ease;}
 button{transition:all .4s ease;-moz-transition:all .4s ease!important;-webkit-transition:all .4s ease!important;-ms-transition:all .4s ease;-o-transition:all .4s ease!important;}
 a:hover{text-decoration:none;}
@@ -64,13 +42,18 @@ img{max-width:100%;}
 ul,li{margin:0;padding:0;}
 img{max-width:100%;height:auto;}
 b,strong{font-weight:700;}
-h1,h2,h3,h4,h5,h6{font-weight:500;color: var(--default);font-family:'AeonikTRIAL-SemiBold',Helvetica,Arial,Lucida,sans-serif;}
+h1,h2,h3,h4,h5,h6{font-weight:500;color: var(--default);font-family: 'AeonikTRIAL-Medium',Helvetica,Arial,Lucida,sans-serif;}
 figure{margin:0px;}
-.container{width: 90%;max-width:1600px;}
 *::-moz-selection{background: var(--maincolor);color:#fff;text-shadow:none;}
 ::-moz-selection{color:#fff;background:var(--maincolor);text-shadow:none;}
 ::selection{background:var(--maincolor);text-shadow:none;color:#fff;}
 .col-center{display:flex;}
+.container{width: 90%;}
+.container{max-width:1920px;}
+
+
+
+
 
 /*--------------------------------------------------------------
 # General Block
@@ -168,7 +151,7 @@ figure{margin:0px;}
 .site-btn li{display: inline-block;padding: 0px 7.5px;}
 .site-btn li:first-child{padding-left: 0px;}
 .site-btn li:last-child{padding-right: 0px;}
-.site-btn li a{color:var(--white);border-radius:50px;font-size:16px;background-color:#ee4023;padding:9px 20px;border:2px solid transparent;text-align: center;font-weight: 600;display: inline-block;transition: all .2s;}
+.site-btn li a{color:var(--white);border-radius:50px;font-size:16px;background-color:#ee4023;padding:9px 20px;border:2px solid transparent;text-align: center;font-weight: 500;display: inline-block;transition: all .2s;font-family: 'AeonikTRIAL-Medium',Helvetica,Arial,Lucida,sans-serif !important;}
 .site-btn li a i{transition: all .2s;display: inline-block;}
 .site-btn li a:hover i{transform: rotate(-45deg);}
 .site-btn li a i{padding-left: 6px;}

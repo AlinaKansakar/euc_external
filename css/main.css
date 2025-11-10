@@ -221,4 +221,5 @@ figure{margin:0px;}
 @media (max-width: 1199px)
 {
   .site-btn li{margin-bottom: 10px;}
+  .footer-contact p,.footer-contact p a{color:var(--white);line-height:1.6;font-size:15px;margin:0px;}
 }

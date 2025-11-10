@@ -218,3 +218,7 @@ figure{margin:0px;}
   .site-btn__btm ul{text-align: left;}
    .mobile-card{margin-bottom: 24px;height: auto;}
 }
+@media (max-width: 1199px)
+{
+  .site-btn li{margin-bottom: 10px;}
+}

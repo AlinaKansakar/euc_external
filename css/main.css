@@ -230,6 +230,9 @@ figure{margin:0px;}
   .site-btn__btm {padding: 0px;margin: 0px;border:none;}
   .site-btn__btm ul{text-align: left;}
    .mobile-card{margin-bottom: 24px;height: auto;}
+   .colf-1{width: 100%;}
+  .colf-2{width: 50%;}
+  .colf-3{width: 50%;}
 }
 @media (max-width: 1199px)
 {
@@ -241,9 +244,6 @@ figure{margin:0px;}
   .mobile-card{margin-bottom: 24px;height: auto;}
 /*  .container{padding: 0px;}*/
   .copyright-wrap p{letter-spacing: 0.031rem;font-size: 12px;}
-   .colf-1{width: 100%;}
-  .colf-2{width: 50%;}
-  .colf-3{width: 50%;}
 }
 @media (max-width: 479px)
 {

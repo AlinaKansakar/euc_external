@@ -134,7 +134,7 @@ figure{margin:0px;}
 .cta-title{color:var(--white);padding:1.6% 0;}
 .cta-title h2{max-width:500px;margin:0 auto 25px auto;color:var(--white);font-weight:600;font-size: clamp(2rem, 1.563rem + 0.82vw, 2.375rem);font-family: 'AeonikTRIAL-SemiBold', Helvetica, Arial, Lucida, sans-serif;line-height: 1em;}
 .cta-title p{max-width:450px;margin:0 auto;word-wrap: break-word;line-height: 1.5em;font-size: 16px;}
-.site-btn__cta{}
+
 .site-btn__wrap{display: flex;flex-wrap: wrap;align-items: center;justify-content: center;max-width: 583px;margin:0 auto;gap: 12px;}
 .cta-content .site-btn{padding-bottom: 1.6%;}
 .cta-content .site-btn ul{text-align: center;}

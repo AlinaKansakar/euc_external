@@ -31,40 +31,46 @@
             </div>
             <div class="row">
                 <!-- Left big card -->
-                <div class="col-lg-4 col-md-12">
+                <div class="col-lg-4 col-md-12 customcol4">
                     <div class="program-card mobile-card" style="background-image: url('images/vitaly-gariev-uk.jpg');">
                         <div class="program-overlay">
-                            <h3>Find your program</h3>
-                            <p>Your Future Begins Here</p>
-                            <div class="counter-program"><span class="counter" data-target="140">0</span></div>
-                            <h3>Programs of Study</h3>
-                            <div class="site-btn site-btn__btm">
-                                <ul>
-                                    <li class="brand-btn"><a href="#">Programs of Study<i class="bi bi-arrow-right"></i></a></li>
-                                    <li class="white-btn"><a href="#">How to apply<i class="bi bi-arrow-right"></i></a></li>
-                                </ul>
+                            <div class="program-overlay__inner">
+                                <h3 class="main-title">Find your program</h3>
+                                <p>Your Future Begins Here</p>
+                                <div class="counter-program"><span class="counter" data-target="140">0</span></div>
+                                <h3 class="pro-title">Programs of Study</h3>
+                                <div class="site-btn site-btn__btm">
+                                    <ul>
+                                        <li class="brand-btn"><a href="#">Programs of Study<i class="bi bi-arrow-right"></i></a></li>
+                                        <li class="white-btn"><a href="#">How to apply<i class="bi bi-arrow-right"></i></a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Right side cards -->
-                <div class="col-lg-8 col-md-12">
+                <div class="col-lg-8 col-md-12 customcol8 custompadd">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12 col-lg-6 frightpadd">
                             <div class="program-card inner-card" style="background-image: url('images/study-online.jpg');">
                                 <div class="program-overlay">
-                                    <h3>Study Online</h3>
-                                    <p>Flexibility and Skills building<br>through Distance Learning</p>
-                                    <a href="#" class="position-absolute top-0 end-0 me-3 mt-3 arrow-icon"><i class="bi bi-arrow-right"></i></a>
+                                    <div class="program-overlay__inner rightmob">
+                                        <h3>Study Online</h3>
+                                        <p>Flexibility and Skills building<br>through Distance Learning</p>
+                                        <a href="#" class="position-absolute top-0 end-0 me-3 mt-3 arrow-icon mobright"><i class="bi bi-arrow-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12 col-lg-6">
                             <div class="program-card inner-card" style="background-image: url('images/studyfrankfruit.jpg');">
                                 <div class="program-overlay">
-                                    <h3>Study in Frankfurt</h3>
-                                    <p>Pursue the MD Medicine program<br>at the EUC Frankfurt Campus</p>
-                                    <a href="#" class="position-absolute top-0 end-0 me-3 mt-3 arrow-icon"><i class="bi bi-arrow-right"></i></a>
+                                    <div class="program-overlay__inner rightmob">
+                                        <h3>Study in Frankfurt</h3>
+                                        <p>Pursue the MD Medicine program<br>at the EUC Frankfurt Campus</p>
+                                        <a href="#" class="position-absolute top-0 end-0 me-3 mt-3 arrow-icon mobright"><i class="bi bi-arrow-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -74,9 +80,11 @@
                                 <div class="tag"><a href="#"># <span id="typing"></span></a></div>
                                 <div class="program-inner card-bottom" style="background-image: url('images/euc-blog.jpg');">
                                     <div class="program-overlay">
-                                        <h3>EUC Student Blog</h3>
-                                        <p>Get a glimpse of EUC life through<br>the eyes of student bloggers.</p>
-                                        <a href="#" class="position-absolute top-0 end-0 me-3 mt-3 arrow-icon"><i class="bi bi-arrow-right"></i></a>
+                                        <div class="program-overlay__inner rightmob">
+                                            <h3>EUC Student Blog</h3>
+                                            <p>Get a glimpse of EUC life through<br>the eyes of student bloggers.</p>
+                                            <a href="#" class="position-absolute top-0 end-0 me-3 mt-3 arrow-icon mobright"><i class="bi bi-arrow-right"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="card-slider">
@@ -105,7 +113,7 @@
     <section class="card-block">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 customcol4">
                     <div class="card-list">
                         <div class="card-item">
                             <div class="card-text">
@@ -119,7 +127,7 @@
                             </div>
                             <div class="card-icon"><a href="#"><i class="bi bi-arrow-right"></i></a></div>
                         </div>
-                        <div class="card-item">
+                        <div class="card-item card-item--last">
                             <div class="card-text">
                                 <h3><a href="#">Scholarships</a></h3>
                             </div>
@@ -127,52 +135,54 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 customcol8">
                     <div class="student-block">
-                        <h3>Connect with EUC Student Ambassadors</h3>
-                        <div class="card-wrap">
-                            <div class="card-box">
-                                <figure class="card-img">
-                                    <img src="images/women-img.png" alt="Card Image">
-                                </figure>
-                                <div class="card-box__inner">
-                                    <h4 class="name">Helga Hlin</h4>
-                                    <p class="position">Dental Surgery</p>
-                                    <p class="description">I come from Reykjavík, Iceland</p>
-                                    <div class="card-btn"><a href="#">Chat with Helga</a></div>
+                        <h3>Talk to a current student</h3>
+                        <div class="student-block__warp">
+                            <div class="card-wrap">
+                                <div class="card-box">
+                                    <figure class="card-img">
+                                        <img src="images/women-img.png" alt="Card Image">
+                                    </figure>
+                                    <div class="card-box__inner">
+                                        <h4 class="name">Helga Hlin</h4>
+                                        <p class="position">Dental Surgery</p>
+                                        <p class="description">I come from Reykjavík, Iceland</p>
+                                        <div class="card-btn"><a href="#">Chat with Helga</a></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card-box">
-                                <figure class="card-img">
-                                    <img src="images/women-img.png" alt="Card Image">
-                                </figure>
-                                <div class="card-box__inner">
-                                    <h4 class="name">Helga Hlin</h4>
-                                    <p class="position">Dental Surgery</p>
-                                    <p class="description">I come from Reykjavík, Iceland</p>
-                                    <div class="card-btn"><a href="#">Chat with Helga</a></div>
+                                <div class="card-box">
+                                    <figure class="card-img">
+                                        <img src="images/women-img.png" alt="Card Image">
+                                    </figure>
+                                    <div class="card-box__inner">
+                                        <h4 class="name">Helga Hlin</h4>
+                                        <p class="position">Dental Surgery</p>
+                                        <p class="description">I come from Reykjavík, Iceland</p>
+                                        <div class="card-btn"><a href="#">Chat with Helga</a></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card-box">
-                                <figure class="card-img">
-                                    <img src="images/women-img.png" alt="Card Image">
-                                </figure>
-                                <div class="card-box__inner">
-                                    <h4 class="name">Helga Hlin</h4>
-                                    <p class="position">Dental Surgery</p>
-                                    <p class="description">I come from Reykjavík, Iceland</p>
-                                    <div class="card-btn"><a href="#">Chat with Helga</a></div>
+                                <div class="card-box">
+                                    <figure class="card-img">
+                                        <img src="images/women-img.png" alt="Card Image">
+                                    </figure>
+                                    <div class="card-box__inner">
+                                        <h4 class="name">Helga Hlin</h4>
+                                        <p class="position">Dental Surgery</p>
+                                        <p class="description">I come from Reykjavík, Iceland</p>
+                                        <div class="card-btn"><a href="#">Chat with Helga</a></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card-box">
-                                <figure class="card-img">
-                                    <img src="images/women-img.png" alt="Card Image">
-                                </figure>
-                                <div class="card-box__inner">
-                                    <h4 class="name">Helga Hlin</h4>
-                                    <p class="position">Dental Surgery</p>
-                                    <p class="description">I come from Reykjavík, Iceland</p>
-                                    <div class="card-btn"><a href="#">Chat with Helga</a></div>
+                                <div class="card-box">
+                                    <figure class="card-img">
+                                        <img src="images/women-img.png" alt="Card Image">
+                                    </figure>
+                                    <div class="card-box__inner">
+                                        <h4 class="name">Helga Hlin</h4>
+                                        <p class="position">Dental Surgery</p>
+                                        <p class="description">I come from Reykjavík, Iceland</p>
+                                        <div class="card-btn"><a href="#">Chat with Helga</a></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

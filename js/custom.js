@@ -90,9 +90,9 @@
             infinite: true,
             speed: 2000,
             dots: false,
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            autoplay: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplay: false,
             autoplaySpeed: 2000,
             arrows: true,
             focusOnSelect: true,
@@ -101,8 +101,24 @@
             prevArrow: '<div class="slick-prev"><i class="bi bi-chevron-left"></i></div>',
             nextArrow: '<div class="slick-next"><i class="bi bi-chevron-right"></i></div>',
             responsive: [
+                 {
+                    breakpoint: 1660,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true
+                    }
+                },
                 {
                     breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true
+                    }
+                },
+                   {
+                 breakpoint: 767,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,

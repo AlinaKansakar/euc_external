@@ -44,25 +44,42 @@
             observer.observe(counters[0]);
         }
 
-
         /*==============================================================
         // Typing
         =============================================================*/
-        const text = "ProudToBeEUC"; // text to type
         const typingElement = $('#typing');
-        let index = 0;
 
-        function type() {
-            if (index < text.length) {
-                typingElement.text(typingElement.text() + text.charAt(index));
-                index++;
-                setTimeout(type, 200); // typing speed in milliseconds
+        if (typingElement.length) {
+            const text = (typingElement.data('typing-text') || '').toString().trim();
+
+            if (text.length) {
+                typingElement
+                    .css({ display: 'inline-block', visibility: 'hidden' })
+                    .text(text);
+
+                const placeholderWidth = typingElement.outerWidth();
+
+                typingElement
+                    .text('')
+                    .css({
+                        visibility: 'visible',
+                        minWidth: `${placeholderWidth}px`,
+                    });
+
+                let index = 0;
+
+                const type = () => {
+                    if (index < text.length) {
+                        typingElement.text(typingElement.text() + text.charAt(index));
+                        index++;
+                        setTimeout(type, 200); // typing speed in milliseconds
+                    }
+                };
+
+                // Start typing after a small delay
+                setTimeout(type, 500);
             }
         }
-
-        // Start typing after a small delay
-        setTimeout(type, 500);
-
 
         /*==============================================================
         // Card Slider
@@ -90,9 +107,9 @@
             infinite: true,
             speed: 2000,
             dots: false,
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            autoplay: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplay: false,
             autoplaySpeed: 2000,
             arrows: true,
             focusOnSelect: true,
@@ -101,8 +118,24 @@
             prevArrow: '<div class="slick-prev"><i class="bi bi-chevron-left"></i></div>',
             nextArrow: '<div class="slick-next"><i class="bi bi-chevron-right"></i></div>',
             responsive: [
+                 {
+                    breakpoint: 1660,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true
+                    }
+                },
                 {
                     breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true
+                    }
+                },
+                   {
+                 breakpoint: 767,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,

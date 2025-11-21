@@ -44,25 +44,42 @@
             observer.observe(counters[0]);
         }
 
-
         /*==============================================================
         // Typing
         =============================================================*/
-        const text = "ProudToBeEUC"; // text to type
         const typingElement = $('#typing');
-        let index = 0;
 
-        function type() {
-            if (index < text.length) {
-                typingElement.text(typingElement.text() + text.charAt(index));
-                index++;
-                setTimeout(type, 200); // typing speed in milliseconds
+        if (typingElement.length) {
+            const text = (typingElement.data('typing-text') || '').toString().trim();
+
+            if (text.length) {
+                typingElement
+                    .css({ display: 'inline-block', visibility: 'hidden' })
+                    .text(text);
+
+                const placeholderWidth = typingElement.outerWidth();
+
+                typingElement
+                    .text('')
+                    .css({
+                        visibility: 'visible',
+                        minWidth: `${placeholderWidth}px`,
+                    });
+
+                let index = 0;
+
+                const type = () => {
+                    if (index < text.length) {
+                        typingElement.text(typingElement.text() + text.charAt(index));
+                        index++;
+                        setTimeout(type, 200); // typing speed in milliseconds
+                    }
+                };
+
+                // Start typing after a small delay
+                setTimeout(type, 500);
             }
         }
-
-        // Start typing after a small delay
-        setTimeout(type, 500);
-
 
         /*==============================================================
         // Card Slider

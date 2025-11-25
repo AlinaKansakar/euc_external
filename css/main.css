@@ -193,6 +193,7 @@ h3.pro-title{padding: 0px;}
 .footer-contact__text,.footer-info{color: var(--white);font-size: 16px;line-height: 24px;}
 .footer-contact p{margin-bottom: 0px;line-height: 24px;}
 .footer-contact p a:hover{color: #c4c4c4;}
+.copyright-wrap p a:hover {color: #c4c4c4;}
 .footer-social{margin-top: 25px;}
 .footer-social ul{list-style-type: none;}
 .footer-social ul li{display: inline-block;padding: 0px 6px;}

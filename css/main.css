@@ -34,6 +34,10 @@
 
 :root{--maincolor:#ee4023;--secondcolor:#1d191c;--white:#ffffff;--black:#000000;--greycolor:#F7F8F7;--bordercolor:#dddddd;--default:#333333;}
 body{font-family: 'AeonikTRIAL-Regular',Helvetica,Arial,Lucida1,sans-serif;font-weight:400;font-size:14px;line-height:24px;color:var(--default);background-color:#ffffff;width:100%;height:100%;letter-spacing: 0.031rem;}
+body.menu-open {
+    overflow: hidden;
+    height: 100vh; /* prevent background scroll */
+}
 a{text-decoration:none;transition:all .4s ease;-moz-transition:all .4s ease;-webkit-transition:all .4s ease;-ms-transition:all .4s ease;-o-transition:all .4s ease;}
 button{transition:all .4s ease;-moz-transition:all .4s ease!important;-webkit-transition:all .4s ease!important;-ms-transition:all .4s ease;-o-transition:all .4s ease!important;}
 a:hover{text-decoration:none;}
@@ -50,6 +54,175 @@ figure{margin:0px;}
 .col-center{display:flex;}
 .container{max-width:1920px;}
 .container{width: 92%;}
+
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.top-header{background-color: #1d191c;}
+.top-bar{font-size:14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+.top-left{padding-left: 57px;}
+.top-right{display:flex;align-items:center;gap:30px;}
+.top-right ul,.top-left ul{display:flex;align-items:center;gap:30px;list-style-type: none;}
+.top-bar ul li a{color: var(--white);font-size: 14px;font-weight: 500;}
+.top-bar ul li a.active,.top-right ul li a.active-prog,.top-right ul li a.euc-login{padding: .3em 1em;font-weight: 500;line-height: 1.7em;display: block;}
+.top-left ul li a.active{background-color: #515151;}
+.top-right ul li a.active-prog{background-color: #ee4023;}
+.top-right ul li a.euc-login{background-color: #dad7d3;color: var(--black);}
+select.language-select{background: none;color: var(--white);border: none;}
+select.language-select option{color: var(--black);}
+
+.main-menu {
+    box-shadow: 0 15px 15px rgba(0,0,0,0.05);
+    width: 100%;
+    background-color: #fff;
+    padding: 13px 0px;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex-shrink: 0;
+    min-width: 250px;
+}
+
+.logo img {
+    max-width: 250px;
+    display: block;
+    height: auto;
+}
+.search svg{
+   transition: transform 0.6s linear;
+  transform: rotate(90deg);
+  position: relative;
+  z-index: 1;
+}
+.menu-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation li a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #333;
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+
+/* Search */
+.search {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.searchBox {
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: none;
+    background: #fff;
+    align-items: center;
+    padding: 0 30px;
+    height: 50px;
+}
+
+.searchBox.active {
+    display: flex;
+}
+
+.searchBox input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    background: #fff;
+    color: #333;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+/* Search Button */
+.searchBtn {
+    transition: transform 0.5s linear;
+}
+
+
+.closeBtn {
+    display: none;
+    cursor: pointer;
+}
+
+.closeBtn.active {
+    display: inline-block;
+}
+
+/* Menu Toggle */
+.menuToggle {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .navigation {
+        position: fixed; /* make it fixed on viewport */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto; /* full height */
+        flex-direction: column;
+        background: #fff;
+        padding: 60px 20px; /* top padding for logo space */
+        transform: translateY(-100%); /* hidden above screen */
+        transition: transform 0.5s ease;
+        z-index: 999;
+        padding: 0 20px;
+        border-top: 3px solid #2ea3f2;
+        overflow: hidden;
+    }
+
+    .header-menu.open .navigation {
+        transform: translateY(0); /* slide down */
+        top: 70px;
+        margin:0 auto;
+        right: 0;
+        left: 0;
+         padding: 20px;
+    }
+
+    .menuToggle {
+        display: block;
+    }
+
+    .hide {
+        display: none !important;
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
 
 
 
@@ -276,8 +449,9 @@ h3.pro-title{padding: 0px;}
   .mobright{right: -50px !important;}
   .counter-program{margin-top: 30px;}
   .card-box__inner--last{padding: 45px 15px 20px 15px;}
+  .top-header,.search{display: none;}
+  .main-menu{padding: 14px 0px;}
 }
-
 @media (max-width: 1199px)
 {
   .site-btn li{margin-bottom: 10px;}
@@ -337,8 +511,8 @@ h3.pro-title{padding: 0px;}
   .footer-social__last{margin-bottom: 0px;}
   .copyright-wrap p{font-size: 13px;}
   .student-block__warp{padding: 0px 0px 0px 0px;}
-  .card-wrap .slick-prev{left: -15px;}
-  .card-wrap .slick-next{right: -15px;}
+  .card-wrap .slick-prev{left: 0px;}
+  .card-wrap .slick-next{right: 0px;}
   .student-block{padding: 20px;}
 }
 @media (max-width: 366px)

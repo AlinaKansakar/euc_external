@@ -137,28 +137,68 @@
                    {
                  breakpoint: 767,
                     settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
                         infinite: true
                     }
                 },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
             ]
         });
 
     });
+
+// Top Bar Menu
+$(document).ready(function() {
+    // Make first menu item active by default
+    $('.top-left ul li a:first').addClass('active');
+
+    // On click, switch active class
+    $('.top-left ul li a').click(function(e) {
+        e.preventDefault(); // prevent default link behavior if needed
+        $('.top-left ul li a').removeClass('active'); // remove active from all
+        $(this).addClass('active'); // add active to clicked
+    });
+});
+
+
+
+// Header Menu
+$(document).ready(function() {
+    var $searchBtn = $('.searchBtn');
+    var $closeBtn = $('.closeBtn');
+    var $searchBox = $('.searchBox');
+    var $header = $('.header-menu');
+    var $menuToggle = $('.menuToggle');
+
+    // Open search
+    $searchBtn.on('click', function() {
+        $searchBox.addClass('active');
+        $closeBtn.addClass('active');
+        $searchBtn.addClass('active'); // will rotate
+        $menuToggle.addClass('hide');
+        $header.removeClass('open');
+    });
+
+    // Close search
+    $closeBtn.on('click', function() {
+        $searchBox.removeClass('active');
+        $closeBtn.removeClass('active');
+        $searchBtn.removeClass('active');
+        $menuToggle.removeClass('hide');
+    });
+
+    // Toggle mobile menu
+    $menuToggle.on('click', function() {
+        $header.toggleClass('open');
+        $searchBox.removeClass('active');
+        $closeBtn.removeClass('active');
+        $searchBtn.removeClass('active');
+    });
+});
+
+
+
+
+
 
 })(jQuery);

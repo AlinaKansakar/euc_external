@@ -137,28 +137,99 @@
                    {
                  breakpoint: 767,
                     settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
                         infinite: true
                     }
                 },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
             ]
         });
 
     });
+
+// Top Bar Menu
+$(document).ready(function() {
+    // Make first menu item active by default
+    $('.top-left ul li a:first').addClass('active');
+
+    // On click, switch active class
+    $('.top-left ul li a').click(function(e) {
+        e.preventDefault(); // prevent default link behavior if needed
+        $('.top-left ul li a').removeClass('active'); // remove active from all
+        $(this).addClass('active'); // add active to clicked
+    });
+});
+
+
+
+// Header Menu
+$(document).ready(function() {
+    var $searchBtn = $('.searchBtn');
+    var $closeBtn = $('.closeBtn');
+    var $searchBox = $('.searchBox');
+    var $header = $('.header-menu');
+    var $menuToggle = $('.menuToggle');
+    var $navigation = $('.navigation'); // select the menu
+
+    // Open search
+    $searchBtn.on('click', function() {
+        $searchBox.addClass('active');    // show search box
+        $closeBtn.addClass('active');     // show close icon
+        $searchBtn.addClass('hide');      // hide search icon
+        $menuToggle.addClass('hide');     // hide menu toggle on mobile
+
+        $navigation.addClass('hidden');   // hide menu only on mobile (CSS handles media query)
+        $header.removeClass('open');      // close mobile menu if it was open
+    });
+
+    // Close search
+    $closeBtn.on('click', function() {
+        $searchBox.removeClass('active'); // hide search box
+        $closeBtn.removeClass('active');  // hide close icon
+        $searchBtn.removeClass('hide');   // show search icon
+        $menuToggle.removeClass('hide');  // show menu toggle
+
+        $navigation.removeClass('hidden'); // show menu again on mobile
+    });
+
+    // Toggle mobile menu
+    $menuToggle.on('click', function() {
+        $header.toggleClass('open');       // toggle menu
+        $searchBox.removeClass('active');  // hide search box if open
+        $closeBtn.removeClass('active');   // hide close icon
+        $searchBtn.removeClass('hide');    // show search icon
+        $navigation.removeClass('hidden'); // ensure menu shows on mobile
+    });
+});
+
+
+
+
+// Sticky Menu
+$(document).ready(function() {
+
+    function updateHeader() {
+        var currentScroll = $(window).scrollTop();
+        var menu = $('.main-menu');
+        var logo = menu.find('.logo img');
+
+        if (currentScroll > 50) {
+            menu.addClass('is-sticky');
+            logo.attr('src', 'images/euc-logo.svg'); // sticky logo
+        } else {
+            menu.removeClass('is-sticky');
+            logo.attr('src', 'images/euc-logo-white.svg'); // default logo
+        }
+    }
+
+    // Run on page load
+    updateHeader();
+
+    // Run on scroll
+    $(window).on('scroll', updateHeader);
+
+});
+
+
 
 })(jQuery);

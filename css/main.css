@@ -61,7 +61,7 @@ figure{margin:0px;}
 # Header
 --------------------------------------------------------------*/
 .top-header{background-color:#1d191c;position:fixed;left:0;right:0;top:0;z-index:11;}
-.top-bar{font-size:14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+.top-bar{font-size:14px;display:flex;justify-content:space-between;align-items:center;}
 .top-left{padding-left: 57px;}
 .top-right{display:flex;align-items:center;gap:30px;}
 .top-right ul,.top-left ul{display:flex;align-items:center;gap:30px;list-style-type: none;}
@@ -139,18 +139,20 @@ select.language-select option{color: var(--black);}
 .hero .site-btn{padding-bottom: 50px;}
 
 /* Responsive */
-@media (max-width:800px){
+
+@media (max-width:980px){
   .main-menu{border-bottom: 1px solid rgba(255, 255, 255, 0.3);padding: 18px 0px !important;}
   .navigation{position:fixed;top:0;left:0;width:92%;height:auto;flex-direction:column;background:#fff;padding:60px 20px;transform:translateY(-100%);transition:transform 0.5s ease;z-index:999;padding:0 20px;border-top:3px solid #2ea3f2;overflow:hidden;}
   .header-menu.open .navigation{transform:translateY(0);top:70px;margin:0 auto;right:0;left:0;padding:20px;}
   .menuToggle{display:block;fill: #fff;}
   .main-menu.is-sticky .menuToggle{fill: #1d191c;}
   .hide{display:none!important;}
-  .main-menu{margin-top: 0px;}
+/*  .main-menu{margin-top: 0px;}*/
   .navigation li a{color: #1d191c;border-bottom: 1px solid rgba(0, 0, 0, .03);padding: 10px 5%;}
   .hero .site-btn{border-bottom: none;margin-bottom: 0px;}
   .site-btn li.transparent-btn{padding-left: 0px;}
   .hero-content{bottom: -15px;}
+  .search svg{margin-right: 12px;}
 }
 
 
@@ -379,6 +381,7 @@ h3.pro-title{padding: 0px;}
   .card-box__inner--last{padding: 45px 15px 20px 15px;}
   .top-header,.search{display: none;}
   .main-menu{padding: 14px 0px;}
+  .main-menu{margin-top: 0px;}
 }
 @media (max-width: 1199px)
 {
@@ -400,6 +403,7 @@ h3.pro-title{padding: 0px;}
   .program-card p{margin-right: 65px;}
 /*  .site-btn__btm{margin-top: 51px;}*/
  .site-btn li a{padding: 11.5px 11px;}
+ .navigation li a{font-size: 15px;}
 }
 @media (max-width: 1919px)
 {
@@ -433,6 +437,7 @@ h3.pro-title{padding: 0px;}
   .custompadd{padding-left: 15px;}
   .inner-card{margin-bottom: 30px;}
   .rightmob{margin-right: 30px;}
+  .top-right{display: none;}
 }
 @media (max-width: 479px)
 {

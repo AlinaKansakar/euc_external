@@ -345,11 +345,11 @@ select.language-select option{color: var(--black);}
 .faq-answer p{padding-bottom:0px;font-size:16px;margin:0px;}
 
 /* Plus Icon */
-.icon{width:25px;height:25px;background:#1d191c;border-radius:50%;transition:all 0.4s ease;position:absolute;top:50%;margin-top:-.5em;left:auto;right:-5px;border: 1px solid transparent;}
+.icon{width:25px;height:25px;background:#1d191c;border-radius:50%;transition:all 0.4s ease;position:absolute;top:50%;margin-top:-.5em;left:auto;right:-5px;border: 2px solid transparent;}
 .icon::before,.icon::after{content:"";position:absolute;background:#ccc;}
 .icon::before{width:12px;height:1.5px;top:50%;left:50%;transform:translate(-50%,-50%);}
 .icon::after{width:1.5px;height:12px;top:50%;left:50%;transform:translate(-50%,-50%);}
-.faq-item.active .icon{background-color: transparent;border: 1px solid #ee4023;}
+.faq-item.active .icon{background-color: transparent;border: 2px solid #ee4023;}
 .faq-item.active .icon::before{background: #ee4023;}
 .faq-item.active .icon::after{display:none;}
 

@@ -226,6 +226,28 @@ $(document).ready(function() {
 
 });
 
+// FAQs
+
+  $(document).ready(function() {
+
+        // Open first item
+        $(".faq-item.active .faq-answer").show();
+
+        $(".faq-question").on("click", function() {
+
+            const parent = $(this).closest(".faq-item");
+
+            // Close others
+            $(".faq-item").not(parent).removeClass("active")
+                .find(".faq-answer").slideUp();
+
+            // Toggle current
+            parent.toggleClass("active");
+            parent.find(".faq-answer").slideToggle();
+
+        });
+
+    });
 
 
 // FadeBottom

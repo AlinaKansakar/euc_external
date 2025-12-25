@@ -85,18 +85,14 @@
         // Card Slider
         =============================================================*/
         $('.card-slider').slick({
-            autoplay: true,
-            arrows: false,
-            dots: false,
-            slidesToShow: 1,
-            infinite: true,
-            pauseOnHover: false,
-            vertical: true, // vertical scroll
-            speed: 1000,
-            autoplaySpeed: 2000,
-            adaptiveHeight: true,
-            draggable: false,
-            swipe: false,
+        dots: false,
+        infinite: true,
+        speed: 1000,
+        autoplaySpeed: 1000,
+        fade: true,
+        autoplay: true,
+        arrows: false,
+        cssEase: 'linear'
         });
 
 
@@ -252,6 +248,13 @@ $(document).ready(function() {
         });
 
     });
+
+
+// FadeBottom
+$(document).ready(function () {
+  $('.card-content p').addClass('animate');
+});
+
 
 
 })(jQuery);

@@ -383,6 +383,32 @@ select.language-select option{color: var(--black);}
 
 
 
+/*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+.features{padding: 3% 0 0 0;}
+.main-title{padding-bottom: 1.6%;max-width: 450px;margin:0 auto;text-align: center;}
+.main-title h2{font-size:clamp(2rem,1.563rem + 0.82vw,2.375rem);font-family:'AeonikTRIAL-SemiBold',Helvetica,Arial,Lucida,sans-serif;font-weight:600;color:#1d191c;line-height:1em;padding-bottom:10px;margin:0px;}
+.main-title p{color: #424242;font-size: 16px;}
+.feature-row{display:-webkit-box;display:-ms-flexbox;display:flex;}
+.feature-lcol{width:48.5%;margin-right:3%;background-color:initial;border-radius:10px;background-size:cover;background-position:50%;background-repeat:no-repeat;position:relative;z-index:2;min-height:1px;}
+.feature-lcol:before{content:"";width:100%;height:100%;background-color:#3d290e;position:absolute;top:0;opacity:0.1;border-radius:10px;}
+.featured-left__title{margin-bottom:3.093%;padding-top:30px;padding-left:30px;max-width:370px;color: #fff;position: relative;}
+.featured-left__title h2{font-size:clamp(2rem,1.563rem + 0.82vw,2.375rem);color:#fff;font-family:'AeonikTRIAL-SemiBold',Helvetica,Arial,Lucida,sans-serif;font-weight:600;line-height:1em;}
+.featured-left__thumb{padding-bottom:30px;padding-left:30px;}
+.featured-left__img{display:inline-block;position:relative;max-width:100%;}
+.featured-left__img img{max-height:95px;width:auto;}
+.feature-rcol{width: 48.5%;}
+.feature-inner__row{display:-webkit-box;display:-ms-flexbox;display:flex;height: 100%;}
+.feature-inner__lcol{width:46.90722%;margin-right:6.186%;background-color:#dad7d3;border-radius:10px 10px 10px 10px;overflow:hidden;border-width:1px;border-color:#bbbbbb;padding-top:0px;padding-bottom:0px;display:flex;flex-wrap:wrap;align-items:center;align-content:center;border:0 solid #333;cursor:pointer;}
+.feature-inner__thumb{padding-top:30px;padding-right:30px;padding-left:30px;margin-bottom:30px;text-align:center;margin-left:auto;margin-right:auto;}
+.feature-inner__img{display:inline-block;position:relative;max-width:100%;border:0 solid #333;}
+.feature-inner__img img{max-height:95px;width:auto;margin: 0 auto;}
+.feature-inner__rcol{width: 46.90722%;background-color:#dad7d3;border-radius:10px 10px 10px 10px;overflow:hidden;border-width:1px;border-color:#bbbbbb;padding-top:0px;padding-bottom:0px;display:flex;flex-wrap:wrap;align-items:center;align-content:center;border:0 solid #333;cursor:pointer;}
+.feature-inner__content{text-align:center;padding-right:30px;padding-bottom:30px;padding-left:30px;}
+.feature-inner__content h3{font-size:1.375rem;font-family:'AeonikTRIAL-SemiBold',Helvetica,Arial,Lucida,sans-serif;font-weight:600;color:#1d191c;padding-bottom:10px;line-height:1em;margin: 0px;}
+.feature-inner__content p{font-size: 16px;color: #424242;margin: 0px;}
+
 
 
 /*--------------------------------------------------------------
@@ -426,7 +452,7 @@ select.language-select option{color: var(--black);}
   .footer-logo-right{float: none;padding-top: 15px;}
   .card-bottom{height:auto;}
   .card-bottom .program-overlay{padding-bottom: 160px;}
-  .card-slider{position:absolute;bottom:30px;left:20px;max-width:100%;right:20px;}
+  .card-slider{position:absolute;bottom:0px;left:0px;max-width:100%;right:0px;}
   .container{width: 92%;}
   .mobile-card{margin-bottom: 24px;height: auto;}
   .site-btn__btm {padding: 0px;margin: 0px;border:none;}
@@ -461,6 +487,8 @@ select.language-select option{color: var(--black);}
   .main-title h2,.section-title h2{font-size:1.875rem;}
   .header-menu.open .navigation{top: 65px;}
   .logo img{max-width:200px;}
+  .faq-main,.faq-section__nobg .faq-title, .faq-section__nobg .faq-subtitle{padding: 0 0vw;}
+  .student-block{margin-left: 0px;}
 }
 @media (max-width: 1199px)
 {
@@ -515,12 +543,16 @@ select.language-select option{color: var(--black);}
  .lefteuc{margin-bottom: 30px;}
  .general-block,.news-block{padding: 40px 0px;}
  .euchalf__first{padding-bottom: 4%;}
+ .feature-row{display: initial;}
+ .feature-lcol{width:100%;margin-bottom:30px;}
+ .feature-rcol{width: 100%;}
+ .features{padding: 40px 0px;}
  .news-row{padding-top: 0%;display: block;}
  .news-fcol,.news-scol{}
  .news-fcol,.news-scol,.news-tcol{width: 100%;}
  .news-fcol,.news-scol{margin-right: 0%;}
  .site-btn  ul li.brand-btn{padding: 0px;margin: 0px;}
-
+ .faq-main,.faq-section__nobg .faq-title, .faq-section__nobg .faq-subtitle{padding: 0 0vw;}
 }
 @media (max-width: 479px)
 {

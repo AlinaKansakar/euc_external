@@ -489,6 +489,7 @@ select.language-select option{color: var(--black);}
   .logo img{max-width:200px;}
   .faq-main,.faq-section__nobg .faq-title, .faq-section__nobg .faq-subtitle{padding: 0 0vw;}
   .student-block{margin-left: 0px;}
+  .image-body img{height: auto;max-height: initial;}
 }
 @media (max-width: 1199px)
 {

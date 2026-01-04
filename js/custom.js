@@ -257,4 +257,33 @@ $(document).ready(function () {
 
 
 
+ /*==============================================================
+        // Left Drawer 
+ =============================================================*/
+
+$(document).ready(function () {
+
+  $("#openFilters").on("click", function () {
+    $("#filterOverlay").addClass("show").scrollTop(0);
+    $("#filterDrawer").addClass("open");
+    $("html, body").addClass("no-scroll");
+  });
+
+  $("#closeFilters, #filterOverlay").on("click", function () {
+    $("#filterDrawer").removeClass("open");
+    $("#filterOverlay").removeClass("show");
+    $("html, body").removeClass("no-scroll");
+  });
+
+  $("#filterDrawer").on("click", function (e) {
+    e.stopPropagation();
+  });
+
+});
+
+
+
+
+
+
 })(jQuery);

@@ -458,7 +458,13 @@ select.language-select option{color: var(--black);}
 .faq-section__nobg .faq-title,.faq-section__nobg .faq-subtitle{text-align:left;max-width:100%;padding: 0 8vw;}
 .faq-section__nobg .faq-title{padding-bottom:10px;}
 .faq-section__nobg .faq-main .faq-item__first{padding-top:18.5px;}
-
+.faqstyle .faq-answer p{margin-bottom: 1rem;line-height: 1.5em;color: #424242;}
+.faqstyle .faq-answer ul{list-style-type:disc;padding:0 0 23px 1em;line-height:26px;}
+.faqstyle .faq-answer ::marker {
+    color: #ee4023;
+    font-size: 1.8rem;
+}
+.faqstyle .faq-answer ul li{font-size:16px;}
 
 
 

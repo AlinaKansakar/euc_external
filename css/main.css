@@ -786,7 +786,7 @@ button.mfp-arrow,button.mfp-close{overflow:visible;cursor:pointer;border:0;-webk
   .prog-list-item{padding-left:0px;}
   .progmobile{display:block;}
   .progdesktop{display:none;}
-  ..prog-block__inner{display:block;}
+  .prog-block__inner{display:block;}
   .prog-block__inner-left{max-width: 100%;}
   .prog-block__content{margin-bottom:20px;}
   .prog-block__inner-right{margin-bottom:0%;}

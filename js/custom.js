@@ -282,8 +282,141 @@ $(document).ready(function () {
 });
 
 
+ /*==============================================================
+        // Scrollable
+ =============================================================*/
+
+jQuery(document).ready(function ($) {
+
+  const headerSelector = ".et-l--header, header, .site-header";
+  const tabsWrap = $("#programTabsWrap");
+  const tabSelector = ".tab-link";
+  const sectionSelector = ".section";
+
+  let stickyStart = 0; // where sticky begins
+  let isClickScrolling = false;
+
+  // Set sticky top below header
+  function setStickyTop() {
+    let headerHeight = $(headerSelector).outerHeight() || 0;
+    tabsWrap.css("top", headerHeight + "px");
+  }
+
+  // Calculate offset for scroll position
+  function getScrollOffset() {
+    let headerHeight = $(headerSelector).outerHeight() || 0;
+    let tabsHeight = tabsWrap.outerHeight() || 0;
+    return headerHeight + tabsHeight + 10;
+  }
+
+  // Set active tab + auto scroll tab into view
+  function setActiveTab($tab) {
+    $(tabSelector).removeClass("active");
+    $tab.addClass("active");
+
+    const el = $tab.get(0);
+    if (el && el.scrollIntoView) {
+      el.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+  }
+
+  // Find the scroll point when the bar hits sticky
+  function calcStickyStart() {
+    stickyStart = tabsWrap.offset().top - ($(headerSelector).outerHeight() || 0);
+  }
+
+  // INIT
+  setStickyTop();
+  calcStickyStart();
+
+  $(window).on("resize", function () {
+    setStickyTop();
+    calcStickyStart();
+  });
+
+  // CLICK TAB -> Smooth scroll
+  $(document).on("click", tabSelector, function (e) {
+    e.preventDefault();
+    isClickScrolling = true;
+
+    const targetId = $(this).attr("href");
+    const $target = $(targetId);
+    if (!$target.length) {
+      isClickScrolling = false;
+      return;
+    }
+
+    setActiveTab($(this));
+
+    const top = $target.offset().top - getScrollOffset();
+    $("html, body").stop().animate({ scrollTop: top }, 550, function () {
+      setTimeout(() => (isClickScrolling = false), 200);
+    });
+  });
+
+  // SCROLLSPY + STICKY CLASS
+  $(window).on("scroll", function () {
+
+    const scrollTop = $(window).scrollTop();
+
+    if (scrollTop >= stickyStart) {
+      tabsWrap.addClass("is-sticky");
+    } else {
+      tabsWrap.removeClass("is-sticky");
+    }
+
+    // Scrollspy (active tab)
+    if (isClickScrolling) return;
+
+    const scrollPos = scrollTop + getScrollOffset() + 5;
+
+    $(sectionSelector).each(function () {
+      const $sec = $(this);
+      const id = $sec.attr("id");
+      if (!id) return;
+
+      const top = $sec.offset().top;
+      const bottom = top + $sec.outerHeight();
+
+      if (scrollPos >= top && scrollPos < bottom) {
+        const $tab = $(tabSelector + '[href="#' + id + '"]');
+        if ($tab.length && !$tab.hasClass("active")) {
+          setActiveTab($tab);
+        }
+      }
+    });
+
+  });
+
+  // Run once
+  $(window).trigger("scroll");
+
+});
 
 
+ /*==============================================================
+        // Masonry Gallery
+ =============================================================*/
+
+$(document).ready(function () {
+  $('.masonry-gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 2],
+      tCounter: '<span class="mfp-counter">%curr% of %total%</span>'
+    },
+    image: {
+      titleSrc: function(item) {
+        return item.el.attr('title');
+      }
+    },
+    mainClass: 'mfp-fade',
+    removalDelay: 200
+  });
+});
 
 
 })(jQuery);

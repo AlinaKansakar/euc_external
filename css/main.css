@@ -252,10 +252,10 @@ select.language-select option{color: var(--black);}
 # Card Block
 --------------------------------------------------------------*/
 .card-block{padding-bottom: 55px;}
-.customcol4{width: 31.3333%;}
-.customcol8{width: 68.6667%;}
-.card-item{position:relative;display:flex;justify-content:space-between;padding:30px;border-radius:10px;align-items:center;margin-bottom:30px;background-color:var(--secondcolor);overflow:hidden;border: 1px solid transparent;}
-/*.card-item::after{content:"";position:absolute;inset:0;background:var(--hover-bg) center/cover no-repeat;opacity:0;transition:opacity 0.4s ease;z-index:1;}
+.customcol4{width: 31.3333%;margin-right: 3%;}
+.customcol8{width: 65.667%;}
+.card-item{position:relative;display:flex;justify-content:space-between;padding:30px;border-radius:10px;align-items:center;margin-bottom:30px;background-color:var(--secondcolor);overflow:hidden;}
+.card-item::after{content:"";position:absolute;inset:0;background:var(--hover-bg) center/cover no-repeat;opacity:0;transition:opacity 0.4s ease;z-index:1;}
 .card-item:hover::after{opacity:1;}
 .card-item::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.2);opacity:0;transition:opacity 0.4s ease;z-index:2;}
 .card-item:hover::before{opacity:1;}*/
@@ -268,7 +268,7 @@ select.language-select option{color: var(--black);}
 .card-item:hover a{background-color: var(--white);}
 .card-item:hover i{transform: rotate(-45deg);color: var(--secondcolor);}
 .card-item:hover h2 a{background: none;}
-.student-block{text-align: center;background-color: #dad7d3;border-radius: 10px;border:1px solid #bbbbbb;padding: 30px;margin-left: 29px;}
+.student-block{text-align: center;background-color: #dad7d3;border-radius: 10px;border:1px solid #bbbbbb;padding: 30px;}
 .student-block h3{padding-bottom: 29px;margin: 0px;font-size: 26px;color: #1d191c;font-weight: 600;font-family: 'AeonikTRIAL-SemiBold', Helvetica, Arial, Lucida, sans-serif;}
 .student-block__warp{padding: 0px 77px 0px 77px;}
 .card-box{position: relative;}
@@ -289,8 +289,8 @@ select.language-select option{color: var(--black);}
 .card-wrap .card-box{padding-right:25px;padding-left:25px;}
 .card-wrap .slick-arrow{width:42px;height:42px;display:flex;border:1px solid #d6d6d6;white-space:nowrap;text-align:center;justify-content:center;flex-direction:column;flex-shrink:0;background:transparent;margin:0px -8px;cursor:pointer;border-radius:50%;background-color: #fff;}
 .card-wrap .slick-arrow i{font-size:20px;color: var(--black);}
-.card-wrap .slick-next{position:absolute;right:-100px;top:50%;z-index:1000;transform:translate(0,-50%);}
-.card-wrap .slick-prev{position:absolute;z-index:1000;top:50%;left:-100px;transform:translate(0,-50%);}
+.card-wrap .slick-next{position:absolute;right:-92px;top:50%;z-index:1000;transform:translate(0,-50%);}
+.card-wrap .slick-prev{position:absolute;z-index:1000;top:50%;left:-92px;transform:translate(0,-50%);}
 .card-wrap .slick-center{display:block;opacity:1;}
 .card-wrap .slick-list{display:flex;display:-webkit-box;display:-ms-flexbox;}
 .slick-dots{text-align:center;margin:0 auto;width:100%;display:block;position:relative;}
@@ -820,8 +820,8 @@ button.mfp-arrow,button.mfp-close{overflow:visible;cursor:pointer;border:0;-webk
   .mobile-card{margin-bottom: 24px;height: auto;}
   .copyright-wrap p{letter-spacing: 0.031rem;font-size: 13px;}
   .student-block__warp{padding: 0px;}
-  .card-wrap .slick-prev{left: -25px;}
-  .card-wrap .slick-next{right: -25px;}
+  .card-wrap .slick-prev{left: -15px;}
+  .card-wrap .slick-next{right: -15px;}
   .frightpadd{padding-right: 15px;}
   .custompadd{padding-left: 15px;}
   .rightmob{margin-right: 30px;}
@@ -852,7 +852,7 @@ button.mfp-arrow,button.mfp-close{overflow:visible;cursor:pointer;border:0;-webk
   .copyright-wrap p{letter-spacing: 0.031rem;font-size: 13px;}
   .site-btn__cta{border:none;margin-bottom: 0px;}
   .cta-title{padding: 20px 0px;}
-  .customcol4{width: 100%;}
+  .customcol4{width: 100%;margin-right:0%;}
   .customcol8{width: 100%;}
   .card-item--last{margin-bottom: 30px;}
   .student-block__warp{padding: 0px;}

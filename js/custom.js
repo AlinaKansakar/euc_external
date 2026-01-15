@@ -101,11 +101,11 @@
         =============================================================*/
         $('.card-wrap').slick({
             infinite: true,
-            speed: 2000,
+            speed: 1000,
             dots: false,
             slidesToShow: 3,
             slidesToScroll: 3,
-            autoplay: false,
+            autoplay: true,
             autoplaySpeed: 2000,
             arrows: true,
             focusOnSelect: true,
